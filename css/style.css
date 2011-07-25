@@ -225,10 +225,18 @@ button {  width: auto; overflow: visible; }
 .clearfix { display: inline-block; }
 * html .clearfix { height: 1%; } /* Hides from IE-mac \*/
 .clearfix { display: block; }
-
-.button	{
+.required	{	color: #dc291e;
+			}
+.button	{	padding: 5px 10px;
+			background: #444;
+			border: white 1px solid;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius:	10px;
 		}
-
+.sub-title	{	color: #95a9ca;
+				padding: 2px 0 6px;
+			}
 
 
  /* Primary Styles
@@ -316,7 +324,7 @@ nav[role=navigation] ul li	{	margin: 10px 0;
 			min-height: 415px;
 			padding: 0 30px;
 			position: relative;
-			margin: 0 0 250px 0;
+			margin: 0 0 360px 0;
 		}
 header[role=banner]	{}
 #logo	{	background: transparent url(../images/logo.png) no-repeat;
@@ -357,33 +365,56 @@ header[role=banner]	{}
 				font-style: normal;
 			}
 #me-standing	{	position: absolute;
-					right: 40px;
-					top: 55px;
+					right: 30px;
+					top: 65px;
 				}
 /* end Home Section
 */
 
 /* Get Started 
 */
-#get-started	{}
-#get-started p	{}
+#get-started	{	position: absolute;
+					top: 475px;
+					left: 30px;	
+					width: 600px;	
+				}
+#get-started p	{	font-family: 'Over the Rainbow', cursive;
+					font-size: 34px;
+				}
+.nav-button	{
+			}
+#get-started-button	{	text-indent: -9999px;
+						width: 400px;
+						height: 90px;
+						display: block;
+						background: url(../images/contact-preview-button.png) no-repeat;
+						position: absolute;
+						top: 45px;
+						right: -70px;
+					}
+#get-started-button:hover	{	background-position: 0 -90px
+							}
 /* end Get Started
 */
 
 /* About Section
 */
-#about	{	background: transparent url(../images/about-section-backgrnd.png) no-repeat center;
-			min-height: 450px;
+#about	{	background: transparent url(../images/about-section-backgrnd.png) no-repeat center -60px;
+			min-height: 850px;
+			height: 850px;
 			padding: 0 30px;
 			position: relative;
-			margin: 0 0 150px 0
+			margin: 0 0 50px 0;
+			
 		}
 #about-me	{	background: transparent url(../images/experience-chart-vertical.png) no-repeat -10px 30px;
 				height: 415px;
 				min-height: 415px;
+				position: relative;
+				top: 370px;
 			}
 #who-i-am	{	position: absolute; 
-				right: 50px;
+				right: 20px;
 				top: 80px;
 				width: 460px;
 			}
@@ -435,11 +466,37 @@ header[role=banner]	{}
 */
 #contact	{	margin: 40px 0;
 				min-height: 450px;
-			
+				position: relative;
+				background: url(../images/contact-backgrnd.png) right top no-repeat;
+				height: 800px;
+				min-height: 800px;
 			}
-#contact-me	{}
-#contact-form	{}
+#contact-me	{	position: absolute;
+				top:310px;
+				right:80px;
+				width: 250px;
+				height: 250px;
+				display: block;
+				-webkit-transform: rotate(-2deg); 
+				-moz-transform: rotate(-2deg);
 
+			}
+#contact-info	{}
+#contact-info li	{	list-style: none;
+						padding: 5px 0;
+					}
+#contact-name	{	font-family: 'Over the Rainbow', cursive;
+					font-size: 38px;	
+					color: #1e4164;
+				}
+#contact-address	{	font-size: 20px;
+					}
+#contact-city-state-zip	{	font-size: 20px;	}
+#contact-phone	{	font-size: 20px;	}
+#contact-email	{	font-size: 20px;	}
+.contact-detail	{	font-size: 20px;	}
+#contact-form	{}
+.form-label	{}
 /* end Contact Section 
 */
 

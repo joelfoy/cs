@@ -84,20 +84,23 @@
 		</header>
 		<img id="me-standing" class="me-photo" src="images/me-standing.png" />
 		<section id="intro">Hello, I'm <span class="me">Joel Foy</span>. I am <em>passionate</em> about minimal, clean and simple <em>web designs</em> that are easy to navigate and have <em>user friendly</em> designs. The goal is to create a site for you that <em>engages</em> your <em>audience</em> or customers.</section>
+		
+		<!-- Get Started -->
+		<div id="get-started">
+			<p>Are you ready to start your website?</p>
+			<a id="get-started-button" class="nav-button" href="#contact">Contact Me!</a>
+		</div>
+		<!-- end Get Started -->
+		
 	</div><!-- end Home -->
 	
-	<!-- Get Started -->
-	<div id="get-started">
-		<p>Are you ready to start your website?</p>
-		<a href="#contact">Contact</a>
-	</div>
-	<!-- end Get Started -->
 	
 	<!-- About Section -->
 	<div id="about">
 		<section id="about-me">
 			<section id="who-i-am">
 				<h2>About Me</h2>
+				<h3 class="sub-title">A one-man creative army</h3>
 				<p>I am an Atlanta based graphic designer and web designer/developer. I do everything from hand coding to photography to video production. I love the process of pulling projects together from concept to completed project.</p> 
 				<p>My projects utilize Photoshop, Illustrator, HTML & CSS, PHP, jQuery and many more.</p>
 			</section>
@@ -181,11 +184,36 @@
     
     <!-- Contact Section -->
     <div id="contact">
+    	<h2>Contact creative|switch</h2>
     	<section id="contact-me">
-    		<p>This is contact info.</p>
+    		<ul id="contact-info">
+				<li id="contact-name" class="contact-detail">Joel Foy</li>
+				<li id="contact-address" class="contact-detail">15 Renwick Dr.</li>
+				<li id="contact-city-state-zip" class="contact-detail">Senoia, GA 30276</li>
+				<li id="contact-phone" class="contact-detail">678-591-7266</li>
+				<li id="contact-email" class="contact-detail">jfoy [at] createswitch [dot] com</li>	    		
+    		
+    		</ul>
     	</section>
     	<section id="contact-form">
-    	
+    		<form id="contact-form" method="post" action="">
+    			<?php // Name Field ?>
+    			<label for="name" class="form-label">Name<span class="required">*</span><span id="name-error" class="required form-error">Name Required</span></label>
+    			<div class="field-container">
+    				<input class="form-input" type="text" id="name" name="name" required ="required" placeholder="John Smith" /> 
+    			</div>
+    			
+    			<?php // email Field ?>
+    			<label for="email" class="form-label">Email<span class="required">*</span><span id="email-error" class="required form-error">Valid Email Required</span></label>
+    			<div class="field-container">
+    				<input class="form-input" type="text" id="name" name="name" required ="required" placeholder="name@sitename.com" /> 
+    			</div>
+    		
+    			<?php // Form Submit ?>
+    			<input type="submit" id="contact-submit" name="contact-submit" value="Get in Touch!" />
+
+    		
+    		</form>
     	</section>
     </div>
     <!-- end Contact Section -->
