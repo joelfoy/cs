@@ -108,10 +108,11 @@ select, input, textarea { color:#444; }
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
 
 h1	{}
-h2	{	
+h2	{	font-weight: normal;
 	}
 h3	{	font-family: 'Over the Rainbow', cursive;
 		font-size: 24px;
+		font-weight: normal;
 	}
 
 /* maxvoltar.com/archive/-webkit-font-smoothing */
@@ -324,7 +325,7 @@ nav[role=navigation] ul li	{	margin: 10px 0;
 			min-height: 415px;
 			padding: 0 30px;
 			position: relative;
-			margin: 0 0 360px 0;
+			margin: 0 0 430px 0;
 		}
 header[role=banner]	{}
 #logo	{	background: transparent url(../images/logo.png) no-repeat;
@@ -365,7 +366,7 @@ header[role=banner]	{}
 				font-style: normal;
 			}
 #me-standing	{	position: absolute;
-					right: 30px;
+					right:10px;
 					top: 65px;
 				}
 /* end Home Section
@@ -389,7 +390,7 @@ header[role=banner]	{}
 						display: block;
 						background: url(../images/contact-preview-button.png) no-repeat;
 						position: absolute;
-						top: 45px;
+						top: 50px;
 						right: -70px;
 					}
 #get-started-button:hover	{	background-position: 0 -90px
@@ -434,7 +435,7 @@ header[role=banner]	{}
 /* Portfolio Section
 */
 #portfolio	{	text-align: center;	
-				margin: 0 0 150px 0;
+				margin: 0 0 250px 0;
 				padding: 40px 0 0 0;
 			}
 #my-work	{	padding: 0 0 20px 0;	}
@@ -464,26 +465,28 @@ header[role=banner]	{}
 
 /* Contact Section 
 */
-#contact	{	margin: 40px 0;
+#contact	{	margin: 40px 0 0 0;
 				min-height: 450px;
 				position: relative;
 				background: url(../images/contact-backgrnd.png) right top no-repeat;
-				height: 800px;
-				min-height: 800px;
+				height: 550px;
+				min-height: 550px;
+			}
+#contact h2	{	font-size: 30px;
+				margin: 10px 0 20px;
 			}
 #contact-me	{	position: absolute;
-				top:310px;
-				right:80px;
+				top:300px;
+				right:70px;
 				width: 250px;
-				height: 250px;
+				height: 230px;
 				display: block;
 				-webkit-transform: rotate(-2deg); 
 				-moz-transform: rotate(-2deg);
-
 			}
-#contact-info	{}
+#contact-info	{	margin: 6px 0 0 0;	}
 #contact-info li	{	list-style: none;
-						padding: 5px 0;
+						padding: 3px 0;
 					}
 #contact-name	{	font-family: 'Over the Rainbow', cursive;
 					font-size: 38px;	
@@ -495,8 +498,57 @@ header[role=banner]	{}
 #contact-phone	{	font-size: 20px;	}
 #contact-email	{	font-size: 20px;	}
 .contact-detail	{	font-size: 20px;	}
-#contact-form	{}
-.form-label	{}
+#contact-form	{	width: 480px;	}
+.form-label	{	font-size: 16px;
+				padding: 10px 0 5px;
+				display: block;
+			}
+.form-error	{	float: right;
+			}
+.field-container	{	background: white;
+						border: #ccc solid 1px;
+						padding: 5px 10px;
+						-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+						-moz-box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+						box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+						margin: 0 0 5px 0;
+					}
+.form-input	{	background: none;
+				font-size: 16px;
+			}
+textarea	{	background: none;
+				width: 460px;
+				height: 60px;
+				font-size: 16px;
+			}
+#contact-submit	{	margin: 14px 2px 14px 0;
+					padding: 10px 15px;
+					float: right;
+					background: transparent url(../images/bg-transparent-black.png);
+					color: white;
+					border: white 1px solid;
+					-moz-border-radius: 10px;
+					-webkit-border-radius: 10px;
+					border-radius:	10px;
+					-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.5);
+					-moz-box-shadow:0 1px 5px rgba(0,0,0,0.5);
+					-box-shadow:0 1px 5px rgba(0,0,0,0.5);
+				}
+#contact-submit:hover	{	color: #1e4164;
+						}
+#message	{	width: 480px;
+			}
+#message h3	{	font-size: 32px;
+			}
+#message p 	{	font-size: 16px;
+				line-height: 1.4em;
+				padding: 8px 0 4px;
+			}
+.thanks	{	color: #1e4164;
+			font-family: 'Over the Rainbow', cursive;
+			font-size: 26px;
+			margin: 14px 0 0 0;
+		}
 /* end Contact Section 
 */
 

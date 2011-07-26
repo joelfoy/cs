@@ -14,9 +14,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
   
-  <title></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Web design and graphic design by creative|switch</title>
+  <meta name="description" content="Atlanta based web design and graphic design studio creative|switch and online portfolio of Joel Foy">
+  <meta name="author" content="Joel Foy">
 
   <!--  Mobile Viewport Fix
         j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
@@ -128,7 +128,7 @@
 			</div>
 			<!-- c-level communications -->
 			<div class="mosaic-block bar">
-				<a href="#" target="_blank" class="mosaic-overlay">
+				<a href="#portfolio" class="mosaic-overlay">
 					<div class="details">
 						<h4>C-Level Communications</h4>
 						<p>Branding &amp; Print</p>
@@ -148,7 +148,7 @@
 			</div>
 			<!-- Avexio -->
 			<div class="mosaic-block bar">
-				<a href="http://www.harrisequip.com" target="_blank" class="mosaic-overlay">
+				<a href="#portfolio" class="mosaic-overlay">
 					<div class="details">
 						<h4>Avexio</h4>
 						<p>Branding</p>
@@ -191,8 +191,7 @@
 				<li id="contact-address" class="contact-detail">15 Renwick Dr.</li>
 				<li id="contact-city-state-zip" class="contact-detail">Senoia, GA 30276</li>
 				<li id="contact-phone" class="contact-detail">678-591-7266</li>
-				<li id="contact-email" class="contact-detail">jfoy [at] createswitch [dot] com</li>	    		
-    		
+				<li id="contact-email" class="contact-detail">jfoy [at] createswitch [dot] com</li>
     		</ul>
     	</section>
     	<section id="contact-form">
@@ -206,8 +205,20 @@
     			<?php // email Field ?>
     			<label for="email" class="form-label">Email<span class="required">*</span><span id="email-error" class="required form-error">Valid Email Required</span></label>
     			<div class="field-container">
-    				<input class="form-input" type="text" id="name" name="name" required ="required" placeholder="name@sitename.com" /> 
+    				<input class="form-input" type="text" id="email-address" name="email-address" required ="required" placeholder="name@sitename.com" /> 
     			</div>
+    			
+    			<?php // phone Field ?>
+    			<label for="phone" class="form-label">Phone<span class="required">*</span><span id="phone-error" class="required form-error">Phone Number Required</span></label>
+    			<div class="field-container">
+    				<input class="form-input" type="text" id="phone" name="phone" required ="required" placeholder="123-123-1234" /> 
+    			</div>
+    			
+    			<?php // Comments ?>
+    			<label for="comments" class="form-label">Brief details of your needs<span class="required">*</span><span id="comments-error" class="required form-error">Required</span></label>
+				<div class="field-container">
+					<textarea id="comments" name="comments" wrap="hard"></textarea>
+				</div>
     		
     			<?php // Form Submit ?>
     			<input type="submit" id="contact-submit" name="contact-submit" value="Get in Touch!" />
