@@ -124,7 +124,7 @@ html { -webkit-font-smoothing: antialiased; }
 
 a:hover, a:active { outline: none; text-decoration: none; }
 
-a, a:active, a:visited { color:#607890; text-decoration: none; }
+a, a:active, a:visited { color:#1e4164; text-decoration: none; }
 a:hover { color:#036; }
 
 
@@ -184,7 +184,7 @@ label, input[type=button], input[type=submit], button { cursor: pointer; }
 }
 
 /*  j.mp/webkit-tap-highlight-color */
-a:link { -webkit-tap-highlight-color: #FF5E99; } 
+a:link { -webkit-tap-highlight-color: #1e4164; } 
 
 
 /* always force a scrollbar in non-IE */
@@ -338,7 +338,7 @@ header[role=banner]	{}
 		}
 #main-navigation	{	position: absolute;
 						top: 30px;
-						right:60px;
+						right:100px;
 					}
 #main-navigation ul	{}
 #main-navigation ul li	{	float: left;
@@ -351,6 +351,8 @@ header[role=banner]	{}
 						height: 100%;
 						color: #888;
 					}
+.main-nav-link a:hover	{	color: #1e4164;
+						}
 #intro-nav	{}
 #about-nav	{}
 #portfolio-nav	{}
@@ -515,6 +517,7 @@ header[role=banner]	{}
 					}
 .form-input	{	background: none;
 				font-size: 16px;
+				width: 96%;
 			}
 textarea	{	background: none;
 				width: 460px;
@@ -552,71 +555,6 @@ textarea	{	background: none;
 /* end Contact Section 
 */
 
-/* 
- * print styles
- */
-@media print {
-  * { background: transparent !important; color: #444 !important; text-shadow: none; }
-
-  a, a:visited { color: #444 !important; text-decoration: underline; }
-
-  a:after { content: " (" attr(href) ")"; } 
-
-  abbr:after { content: " (" attr(title) ")"; }
-  
-  .ir a:after { content: ""; }  /* Don't show links for images */
-  
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  
-  img { page-break-inside: avoid; }
-
-  @page { margin: 0.5cm; }
-
-  p, h2, h3 { orphans: 3; widows: 3; }
-
-  h2, h3{ page-break-after: avoid; }
-}
-
-
-
-/*
- * Media queries for responsive design
- */
-
-@media all and (orientation:portrait) { 
-  /* Style adjustments for portrait mode goes here */
-  
-}
-
-@media all and (orientation:landscape) { 
-  /* Style adjustments for landscape mode goes here */
-  
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
-   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-width: 480px) {
-
-  
-  /* Prevent iOS, WinMobile from adjusting font size */
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
-}
-
-/*
-	Mosaic - Sliding Boxes and Captions jQuery Plugin
-	Version 1.0.1
-	www.buildinternet.com/project/mosaic
-	
-	By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
-	Released under MIT License / GPL License
-*/
-
-* {
-	margin:0;
-	padding:0;
-	border:none;
-	outline:none;
-}
 
 /*General Mosaic Styles*/
 .mosaic-block {
@@ -693,3 +631,336 @@ textarea	{	background: none;
 			background:url(../images/bg-black.png);
 		}
 		/*** End Animation Styles ***/
+
+
+/* 
+ * print styles
+ */
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none; }
+
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+
+  a:after { content: " (" attr(href) ")"; } 
+
+  abbr:after { content: " (" attr(title) ")"; }
+  
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  
+  img { page-break-inside: avoid; }
+
+  @page { margin: 0.5cm; }
+
+  p, h2, h3 { orphans: 3; widows: 3; }
+
+  h2, h3{ page-break-after: avoid; }
+}
+
+
+
+/*
+ * Media queries for responsive design
+ */
+
+@media all and (orientation:portrait) { 
+  /* Style adjustments for portrait mode goes here */
+  
+}
+
+@media all and (orientation:landscape) { 
+  /* Style adjustments for landscape mode goes here */
+  
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-width: 660px) {
+
+		/* Home Section 
+		*/
+		#container	{	width: 96%;
+						min-height:1200px;
+						margin: 0 auto;
+					}
+		#home	{	background: #f0f0f0;
+					min-height: 200px;
+					padding: 0 30px;
+					position: relative;
+					margin: 0 0 200px 0;
+					border-bottom: 1px solid #f1f1f1;
+					-webkit-box-shadow:0 1px 7px rgba(0,0,0,0.3);
+					-moz-box-shadow:0 1px 7px rgba(0,0,0,0.3);
+					-box-shadow:0 1px 7px rgba(0,0,0,0.3);
+				}
+		header[role=banner]	{}
+		#logo	{	background: transparent url(../images/logo-400px.png) no-repeat;
+					min-width: auto;
+					max-height: 80px;
+					min-height: 50px;
+					width: 80%;
+					height: auto;
+					display: block;
+					margin-bottom: 20px;
+					text-indent: -9999px;
+					-webkit-background-size: cover;
+			        -moz-background-size: cover;
+			        -o-background-size: cover;
+			        background-size: cover;
+				}
+		#logo img	{				}
+		#main-navigation	{	display: block;
+								position: relative;
+								top: 0;
+								left: 0;
+								margin: 25px 0 40px 0;
+							}
+		#main-navigation ul	{}
+		#main-navigation ul li	{	float: left;
+									margin: 0;
+								}
+		
+		.main-nav-link	{	text-decoration: none;	
+							padding: 3px 15px;
+						}
+		.main-nav-link:first-child	{	padding: 3px 15px 3px 0; 
+									}
+		.main-nav-link a	{	text-decoration: none;
+								width: 100%;
+								height: 100%;
+								color: #888;
+							}
+		#intro-nav	{}
+		#about-nav	{}
+		#portfolio-nav	{}
+		#contact-nav	{}
+		#intro	{	width: 100%;
+					margin: 50px 0 0 0 ;
+					font-size: 1.9em;
+					line-height: 1.1em;
+					padding: 10px 0 40px;
+				}
+		.me	{	color: #1e4164;
+			}
+		#intro em	{	color: #95a9ca;
+						font-style: normal;
+					}
+		#me-standing	{	display: none;
+							visibility: hidden;
+						}
+		/* end Home Section
+		*/
+		
+		/* Get Started 
+		*/
+		#get-started	{	display: none;
+							visibility: hidden;	
+						}
+		#get-started p	{	display: none;
+							visibility: hidden;
+						}
+		.nav-button	{
+					}
+		#get-started-button	{	display: none;
+							visibility: hidden;
+							}
+		#get-started-button:hover	{	display: none;
+										visibility: hidden;									
+									}
+		/* end Get Started
+		*/
+  		/* About Section
+		*/
+		#about	{	background: #eeeeee;
+					min-height: 700px;
+					height: 700px;
+					padding: 20px 45px 20px 30px;
+					position: relative;
+					margin: 0 0 50px 0;
+					border: 1px solid #f1f1f1;
+					-webkit-box-shadow:0 1px 7px rgba(0,0,0,0.3);
+					-moz-box-shadow:0 1px 7px rgba(0,0,0,0.3);
+					-box-shadow:0 1px 7px rgba(0,0,0,0.3);
+				}
+		#about-me	{	background: transparent url(../images/experience-chart-vertical.png) no-repeat bottom center;
+						top: 0;
+						margin: 0 auto;
+						display: block;
+						min-height: 680px;
+					}
+		#who-i-am	{	position: relative; 
+						right: 0;
+						top: 0;
+						width: 100%;
+						padding: 12px;
+					}
+		#about-me h2	{	color: #1e4164;
+							font-size: 30px;
+							font-weight: normal;
+						}
+		#about-me p	{	font-size: 16px;
+						line-height: 1.2em;
+						padding: 0 0 20px 0;
+					}
+		
+		
+		/* end About Section 
+		*/
+		
+		/* Portfolio Section
+		*/
+		#portfolio	{	text-align: center;	
+						margin: 0 0 150px 0;
+						padding: 40px 0 0 0;
+					}
+		#my-work	{	padding: 0 0 20px 0;	}
+		#my-work h2	{	font-size: 30px;
+						font-weight: normal;
+					}
+		#my-work h3	{	color: #999999;	}
+		#work-examples	{	margin: 0 0 40px 0;	
+							display: block;
+						}
+		.details	{	color: white;
+						text-decoration: none;
+						padding: 14px 14px 0 14px;
+						text-align: left;
+					}
+		.details h4	{	font-size: 18px;
+						padding: 0 0 10px 0;
+						color: #95a9ca;
+						font-weight: normal;
+					}
+		.details p	{	text-decoration: none;	
+						font-size: 14px;
+					}
+		.details a	{	text-decoration: none;	}
+		.mosaic-block 	{	margin: 12px auto;	
+							display: block;
+							float: none;
+						}
+		/* end Portfolio Section
+		*/
+		
+		/* Contact Section 
+		*/
+		#contact	{	margin: 40px 0 0 0;
+						min-height: 450px;
+						position: relative;
+						background: url(../images/contact-backgrnd.png) center 450px no-repeat;
+						height: 980px;
+						min-height: 980px;
+						padding: 0 30px;
+					}
+		#contact h2	{	font-size: 30px;
+						margin: 10px 0 20px;
+					}
+		#contact-me	{	position: absolute;
+						top:300px;
+						right:70px;
+						width: 250px;
+						height: 230px;
+						display: block;
+						-webkit-transform: rotate(-2deg); 
+						-moz-transform: rotate(-2deg);
+					}
+		#contact-info	{	margin: 6px 0 0 0;
+							position: absolute;
+							top: 450px;
+							left: -25px;
+							width: 200px;	
+						}
+		#contact-info li	{	list-style: none;
+								padding: 3px 0;
+							}
+		#contact-name	{	font-family: 'Over the Rainbow', cursive;
+							font-size: 38px;	
+							color: #1e4164;
+						}
+		#contact-address	{	font-size: 20px;
+							}
+		#contact-city-state-zip	{	font-size: 20px;	}
+		#contact-phone	{	font-size: 20px;	}
+		#contact-email	{	font-size: 20px;	}
+		.contact-detail	{	font-size: 20px;	}
+		#contact-form	{	width: 440px;
+							margin: 0 auto;	
+							position: relative;
+							z-index: 8888;
+						}
+		.form-label	{	font-size: 16px;
+						padding: 10px 0 5px;
+						display: block;
+					}
+		.form-error	{	float: right;
+					}
+		.field-container	{	background: white;
+								border: #ccc solid 1px;
+								padding: 5px 10px;
+								-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+								-moz-box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+								box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+								margin: 0 0 5px 0;
+							}
+		.form-input	{	background: none;
+						font-size: 16px;
+						width: 96%;
+					}
+		textarea	{	background: none;
+						width: 460px;
+						height: 60px;
+						font-size: 16px;
+					}
+		#contact-submit	{	margin: 14px 2px 14px 0;
+							padding: 10px 15px;
+							float: right;
+							background: transparent url(../images/bg-transparent-black.png);
+							color: white;
+							border: white 1px solid;
+							-moz-border-radius: 10px;
+							-webkit-border-radius: 10px;
+							border-radius:	10px;
+							-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.5);
+							-moz-box-shadow:0 1px 5px rgba(0,0,0,0.5);
+							-box-shadow:0 1px 5px rgba(0,0,0,0.5);
+						}
+		#contact-submit:hover	{	color: #1e4164;
+								}
+		#message	{	width: 480px;
+					}
+		#message h3	{	font-size: 32px;
+					}
+		#message p 	{	font-size: 16px;
+						line-height: 1.4em;
+						padding: 8px 0 4px;
+					}
+		.thanks	{	color: #1e4164;
+					font-family: 'Over the Rainbow', cursive;
+					font-size: 26px;
+					margin: 14px 0 0 0;
+				}
+		/* end Contact Section 
+		*/
+
+
+  /* Prevent iOS, WinMobile from adjusting font size */
+  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+}
+
+/*
+	Mosaic - Sliding Boxes and Captions jQuery Plugin
+	Version 1.0.1
+	www.buildinternet.com/project/mosaic
+	
+	By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+	Released under MIT License / GPL License
+*/
+
+* {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+

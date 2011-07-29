@@ -195,7 +195,7 @@
     		</ul>
     	</section>
     	<section id="contact-form">
-    		<form id="contact-form" method="post" action="">
+    		<form id="contact-form" method="post" action="inc/contact-process.php">
     			<?php // Name Field ?>
     			<label for="name" class="form-label">Name<span class="required">*</span><span id="name-error" class="required form-error">Name Required</span></label>
     			<div class="field-container">
@@ -205,7 +205,7 @@
     			<?php // email Field ?>
     			<label for="email" class="form-label">Email<span class="required">*</span><span id="email-error" class="required form-error">Valid Email Required</span></label>
     			<div class="field-container">
-    				<input class="form-input" type="text" id="email-address" name="email-address" required ="required" placeholder="name@sitename.com" /> 
+    				<input class="form-input" type="text" id="email" name="email" required ="required" placeholder="name@sitename.com" /> 
     			</div>
     			
     			<?php // phone Field ?>

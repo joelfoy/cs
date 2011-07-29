@@ -1,10 +1,12 @@
 <?php 
+
+
+if($_POST) {
+
 function validateEmail($email)
 {  
 	return ereg("^[a-zA-Z0-9]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$", $email);  
 }
-
-if($_POST) {
 
 error_reporting(0);
 //Create an ERROR array
@@ -13,9 +15,9 @@ $errors = array();
 //Get form inputs
 	if (!$_POST['name'])
 		$errors[] = "Name is required.";
-	if (!$_POST['email-address'])
+	if (!$_POST['email'])
 		$errors[] = "An email is required.";
-	if (!validateEmail($_POST['email-address']))
+	if (!validateEmail($_POST['email']))
 		$errors[] = "Please use a valid email address.";
 	if (!$_POST['phone'])
 		$errors[] = "A phone number is required.";
@@ -32,7 +34,7 @@ $errors = array();
 	$subject = "creative|switch Contact Form";
 	$to = "joelfoy@gmail.com";
 	$name = $_POST['name'];
-	$email = $_POST['email-address'];
+	$email = $_POST['email'];
 	$phone = $_POST['phone'];
 	$comments = $_POST['comments'];
 	
@@ -57,7 +59,7 @@ $errors = array();
 	$replyMessage .= "<table cellpadding='0' cellspacing='0' width='650'>";
 	$replyMessage .= "<tr style='background-color:#dedede; padding-top:5px;'>";
 	$replyMessage .= "<td style='padding:10px 0 10px 20px' width='100'><img src='http://www.createswitch.com/images/logo-small.png' /></td>";
-	$replyMessage .= "<td style='font-family:sans-serif; font-weight:bold; font-size:22px; color:#444;  padding:5px 0 0 10px;' valign='middle'>Contact Form</td>";
+	$replyMessage .= "<td style='font-family:sans-serif; font-weight:bold; font-size:22px; color:#444;  padding:5px 0 0 10px;' valign='middle'></td>";
 	$replyMessage .= "</tr></table></td></tr><tr>";
 	$replyMessage .= "<table cellpadding='0' cellspacing='0' width='650' style='font-family:sans-serif;' >";
 	$replyMessage .= "<tr style=''>";
@@ -93,7 +95,7 @@ $errors = array();
 
 } else {
 //You do not have access
-print "<meta http-equiv=\"refresh\" content=\"0;URL=http://christopherbryancpa.com/#contact?signup=invalid\">";
+print "<meta http-equiv=\"refresh\" content=\"0;URL=http://www.createswitch.com/#contact?signup=invalid\">";
 
 }//end form
 

@@ -105,10 +105,10 @@ $(document).ready(function() {
 	      	$("input#name").focus();  
 	      	return false;  
     	}
-    	var email = $("input#email-address").val();  
+    	var email = $("input#email").val();  
 	    	if (email == "" || !isValidEmailAddress(email)) { 
 		      	$("#email-error").show(); 
-		      	$("input#email-address").focus();  
+		      	$("input#email").focus();  
 		      	return false;  
 	    }
 	    var phone = $("input#phone").val();  
@@ -130,7 +130,7 @@ $(document).ready(function() {
     	// Send Form with a little AJAX
     	$.ajax({
     		type: "POST",
-    		url: "http://www.createswitch.com/inc/contact-process.inc.php", //change to correct host 
+    		url: "http://www.createswitch.com/inc/contact-process.php", //change to correct host 
     		data: dataString, 
     		success: function() {
     			$('#contact-form').fadeOut(1000, function() {
